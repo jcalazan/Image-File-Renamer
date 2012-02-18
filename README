@@ -1,0 +1,15 @@
+Image-File-Renamer
+
+A simple Python program for auto-renaming image files.
+
+The user will be asked to enter the path of the directory containing the image files.  The program will then check whether the specified path is valid before prompting the user to enter the filename pattern.
+
+There are 2 special tags that can be used in the filename pattern:
+1. <num> - This will automatically number the image filenames in sequence (3 decimal places, i.e. from 001-999).
+2. <datetaken> - This program will look for the value of the image's 'DateTimeOriginal' EXIF attribute to get the date the picture was taken.
+
+NOTES:
+1. PIL (Python Imaging Library) is requried to retrieve the EXIF data. You can download it from http://www.pythonware.com/products/pil.
+2. I decided not to traverse subdirectories as that could be pretty dangerous if the wrong path is accidentally entered.
+3. It's set to pad the numbering ('<num>' tag) to 3 digits.
+4. It will rename any file that is not a directory (maybe add a check later for file type).
