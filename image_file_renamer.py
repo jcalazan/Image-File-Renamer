@@ -42,7 +42,7 @@ def get_date_taken(filename):
 
 def get_filenames():
     os.chdir(folderpath)
-    return os.listdir(os.getcwd())
+    return sorted(os.listdir(os.getcwd()))
 
 def get_numbering_format(digits, num):
     if digits == 1:
